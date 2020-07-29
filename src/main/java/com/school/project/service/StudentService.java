@@ -43,9 +43,9 @@ public class StudentService {
 		
 			if (student.isPresent()) {
 				Student object = student.get();
-				object.setEmail(entity.getEmail());
 				object.setName(entity.getName());
-				
+				object.setDob(entity.getDob());
+				object.setPhoneNumber(entity.getPhoneNumber());
 				return repository.save(object);
 				
 			} else {
